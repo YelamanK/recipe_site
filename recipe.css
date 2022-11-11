@@ -102,6 +102,7 @@ div.col {
 div.col1 {
     display: inline-block;
     margin-right: 10%;
+    margin-bottom: 20px;
 }
 div.col2 {
     float: right;
