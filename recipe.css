@@ -5,27 +5,15 @@
 body {
     background-color: #8BA1BB;
     font-family: Arial;
-}
-
-p.category {
-    background-color: black;
-    color: white;
-    display: inline-block;
-    margin-top: -15px;
-    margin-bottom: 0px;
-    text-align: center;
-    padding: 8px 20px;
-    font-weight: bold;
-    margin-bottom: 0;
-    font-size: 16px;
+    margin: 0;
 }
 
 div.content {
     background-color: white;
-    margin: 60px 10% 80px 10%;
-    padding: 0px 30px 30px 30px;  
-    min-width: 350px;
-    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px 8px 20px 8px;
+    padding: 8px 8px 20px 8px;
+    /*min-width: 350px;*/
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
     overflow: visible;
 }
 
@@ -41,15 +29,29 @@ p.description {
     display: inline-block;
     font-size: 14px;
 }
+
 .center {
     text-align: center;
-    width: 100%
+    width: 100%;
 }
+
 div.category {
     margin-bottom: 0px;
     margin-top: 0px;
     overflow: visible;
 }
+
+p.category {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin-top: -15px;
+    margin-bottom: 0px;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
 div.separator {
     height: 1px;
     width: 100px;
@@ -57,30 +59,33 @@ div.separator {
     margin-left: auto;
     margin-right: auto;
 }
+
+
 div.info {
-    position:relative; 
+    position:relative;
 }
 
 table.info {
     position:absolute; 
-    bottom: 0;
-    width: 100%; 
-    color: white; 
-    background-color: #6C829DC0; 
-    height: 80px
+    bottom:0; 
+    width: 100%; color: white;
+    background-color: #6C829DC0;
+    height: 50px;
 }
 
-/* All the table data of the table in the info class */
+/* All the td of the table that has a info class */
 table.info td {
     text-align: center;
     vertical-align: top;
-    font-size: 14px;
+    font-size: 12px;
 }
+
 table.info th {
     vertical-align: bottom;
     padding-bottom: 8px;
-    font-size: 16px;
+    font-size: 14px;
 }
+
 img.info {
     display: block;
     max-height: 400px;
@@ -88,34 +93,39 @@ img.info {
     min-height: 200px;
     background-color: lightgray;
 }
+
 div.col {
-    width: 45%;
+    width: 100%;
     margin-top: 20px;
 }
-.col h2 {
+
+div.col h2 {
     text-align: center;
     text-transform: uppercase;
     font-size: 15px;
     border-bottom: 5px solid #6C829D;
     padding-bottom: 5px;
 }
+
 div.col1 {
     display: inline-block;
-    margin-right: 10%;
-    margin-bottom: 20px;
+    /*margin-right: 10%;*/
+    margin-bottom : 20px;
 }
+
 div.col2 {
-    float: right;
+    /*float: right;*/
 }
+
 div.ingredients p {
+    text-align: center;
     font-size: 14px;
     border: 1px solid lightgray;
-    margin-top: 4px;
-    margin-bottom: 0px;
     padding: 8px 0;
-    text-align: center;
-
+    margin-top: 4px;
+    margin-bottom: 0;
 }
+
 table.instructions p.number {
     background-color: #6C829D;
     color: white;
@@ -129,15 +139,57 @@ table.instructions p.number {
     border-radius: 50%;
     margin: 0;
 }
+
 table.instructions td.instruction_step {
-    font-size: 14px;
     padding-left: 10px;
     padding-bottom: 10px;
+    font-size: 14px;
 }
+
 table.instructions td {
     vertical-align: top;
 }
+
 table.instructions tr {
     height: 40px;
 }
 
+/* Desktop styles*/
+@media only screen and (min-width: 768px) {
+    div.content {
+        margin: 60px 10% 80px 10%;
+        padding: 0px 30px 30px 30px;
+        min-width: 350px;
+    }
+    table.info {
+        height: 80px
+    }
+    table.info th {
+        font-size: 16px;
+    }
+    table.info td {
+        font-size: 14px;
+    }
+    div.col {
+        width: 45%;
+        margin-top: 20px;
+    }
+    
+    div.col1 {
+        display: inline-block;
+        margin-right: 10%;
+        margin-bottom : 20px;
+    }
+    
+    div.col2 {
+        float: right;
+    }
+}
+/* Very large screen */
+@media only screen and (min-width: 900px) {
+    div.content {
+        margin-left:auto;
+        margin-right:auto;
+        width: 650px;
+}
+}
